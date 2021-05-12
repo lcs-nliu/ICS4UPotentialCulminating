@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46D8AA3F2645BA3100F27C54 /* Predecessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8AA3B2645BA3000F27C54 /* Predecessor.swift */; };
+		46D8AA402645BA3100F27C54 /* LindenmayerSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8AA3C2645BA3000F27C54 /* LindenmayerSystem.swift */; };
+		46D8AA412645BA3100F27C54 /* Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8AA3D2645BA3000F27C54 /* Visualizer.swift */; };
+		46D8AA422645BA3100F27C54 /* Successor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8AA3E2645BA3000F27C54 /* Successor.swift */; };
+		46D8AA472645BACA00F27C54 /* scott-berry-tree.json in Resources */ = {isa = PBXBuildFile; fileRef = 46D8AA452645BACA00F27C54 /* scott-berry-tree.json */; };
+		46D8AA482645BACA00F27C54 /* gordon-basic-branching-tree.json in Resources */ = {isa = PBXBuildFile; fileRef = 46D8AA462645BACA00F27C54 /* gordon-basic-branching-tree.json */; };
 		81064A0A1C130A10007ED524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81064A091C130A10007ED524 /* AppDelegate.swift */; };
 		81064A0C1C130A10007ED524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81064A0B1C130A10007ED524 /* ViewController.swift */; };
 		81064A0E1C130A10007ED524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81064A0D1C130A10007ED524 /* Assets.xcassets */; };
@@ -56,6 +62,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		46D8AA3B2645BA3000F27C54 /* Predecessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predecessor.swift; sourceTree = "<group>"; };
+		46D8AA3C2645BA3000F27C54 /* LindenmayerSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LindenmayerSystem.swift; sourceTree = "<group>"; };
+		46D8AA3D2645BA3000F27C54 /* Visualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visualizer.swift; sourceTree = "<group>"; };
+		46D8AA3E2645BA3000F27C54 /* Successor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Successor.swift; sourceTree = "<group>"; };
+		46D8AA452645BACA00F27C54 /* scott-berry-tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "scott-berry-tree.json"; sourceTree = "<group>"; };
+		46D8AA462645BACA00F27C54 /* gordon-basic-branching-tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "gordon-basic-branching-tree.json"; sourceTree = "<group>"; };
 		81064A061C130A10007ED524 /* Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81064A091C130A10007ED524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81064A0B1C130A10007ED524 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46D8AA442645BAA900F27C54 /* SystemCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				46D8AA462645BACA00F27C54 /* gordon-basic-branching-tree.json */,
+				46D8AA452645BACA00F27C54 /* scott-berry-tree.json */,
+			);
+			name = SystemCatalog;
+			sourceTree = "<group>";
+		};
 		810649FD1C130A10007ED524 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +192,11 @@
 				814ADAFE248EB5E300F80486 /* StaticSketch.swift */,
 				814ADAFC248EB56900F80486 /* EmptySketch.swift */,
 				819F9E6D26415FDC00C7883F /* LindenmayerSystemSketch.swift */,
+				46D8AA3C2645BA3000F27C54 /* LindenmayerSystem.swift */,
+				46D8AA3B2645BA3000F27C54 /* Predecessor.swift */,
+				46D8AA3E2645BA3000F27C54 /* Successor.swift */,
+				46D8AA3D2645BA3000F27C54 /* Visualizer.swift */,
+				46D8AA442645BAA900F27C54 /* SystemCatalog */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -474,8 +500,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D8AA482645BACA00F27C54 /* gordon-basic-branching-tree.json in Resources */,
 				81064A0E1C130A10007ED524 /* Assets.xcassets in Resources */,
 				81064A111C130A10007ED524 /* Main.storyboard in Resources */,
+				46D8AA472645BACA00F27C54 /* scott-berry-tree.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,10 +528,14 @@
 				814ADAF5248EAB6A00F80486 /* TurtleSketch.swift in Sources */,
 				814ADAF9248EB34900F80486 /* BasicSketch.swift in Sources */,
 				814ADAFB248EB45F00F80486 /* AudioInputSketch.swift in Sources */,
+				46D8AA422645BA3100F27C54 /* Successor.swift in Sources */,
+				46D8AA412645BA3100F27C54 /* Visualizer.swift in Sources */,
 				814ADAF1248E9F8200F80486 /* AudioAnalyser.swift in Sources */,
+				46D8AA402645BA3100F27C54 /* LindenmayerSystem.swift in Sources */,
 				814ADAF3248E9FDA00F80486 /* Sketchable.swift in Sources */,
 				814ADAFD248EB56900F80486 /* EmptySketch.swift in Sources */,
 				814ADAFF248EB5E300F80486 /* StaticSketch.swift in Sources */,
+				46D8AA3F2645BA3100F27C54 /* Predecessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -72,7 +72,7 @@ class LindenmayerSystemSketch: NSObject, Sketchable {
         // MARK: Initialize L-system state
         
         // What the system will draw, without any re-writes based upon production rules
-        axiom = "EEF"
+        axiom = "[XXF][-XF][+XF][-F][+F]"
         
         // DEBUG: What's the word?
         print("Axiom is:")
@@ -87,33 +87,30 @@ class LindenmayerSystemSketch: NSObject, Sketchable {
         // The rules the define how the word is re-written with each new generation
         rules = [
             "F": [
-                Successor(odds: 3, text: "XXG[-G][+G]"),
-                Successor(odds: 3, text: "XG[--G][+G]"),
-                Successor(odds: 3, text: "XXXG[-G][++G]"),
+                Successor(odds: 1, text: "[XG][+X[+XXB]L][-X[-XXB]R]"),
+                
             ],
             "G": [
-            
-                Successor(odds: 3, text: "XXH[-H][+H]"),
-                Successor(odds: 3, text: "XH[--H][+H]"),
-                Successor(odds: 3, text: "XXXH[-H][++H]"),
+                Successor(odds: 1, text: "[XH][-XR][+XL]"),
             ],
+            
             "H": [
-            
-                Successor(odds: 3, text: "XXI[-I][+I]"),
-                Successor(odds: 3, text: "XI[--I][+I]"),
-                Successor(odds: 3, text: "XXXI[-I][++I]"),
+                Successor(odds: 1, text: "[XI][-XR][+XL]"),
             ],
+            
             "I": [
-            
-                Successor(odds: 3, text: "XXJ[-J][+J]"),
-                Successor(odds: 3, text: "XJ[--J][+J]"),
-                Successor(odds: 3, text: "XXXJ[-J][++J]"),
+                Successor(odds: 1, text: "[XB][-J][+J]"),
             ],
-            "J": [
             
-                Successor(odds: 3, text: "XXX[-XXB][+XB]"),
-                Successor(odds: 3, text: "XX[--XXB][+XXX]"),
-                Successor(odds: 3, text: "XXXX[-XB][++XXB]"),
+            "J": [
+                Successor(odds: 1, text: "[-XB][+XB]"),
+            ],
+            
+            "L": [
+                Successor(odds: 1, text: "[+XB][XB]")
+            ],
+            "R": [
+                Successor(odds: 1, text: "[-XB][XB]")
             ],
         ]
         
@@ -184,13 +181,13 @@ class LindenmayerSystemSketch: NSObject, Sketchable {
         // MARK: Initialize L-system rendering instructions
         
         // The length of the line segments used when drawing the system, at generation 0
-        length = 27
+        length = 100
         
         // The factor by which to reduce the initial line segment length after each generation / word re-write
         reduction = 1.25
         
         // The angle by which the turtle will turn left or right; in degrees.
-        angle = 20
+        angle = 18
         
         // Where the turtle begins drawing on the canvas
         initialPosition = Point(x: 250, y: 100)
@@ -243,8 +240,9 @@ class LindenmayerSystemSketch: NSObject, Sketchable {
                 // Restore position and heading
                 turtle.restoreState()
             case "B":
-                // Render a small berry
-                canvas.drawEllipse(at: Point(x: 0, y: 0), width: 5, height: 5)
+                // render a small flower
+                canvas.drawEllipse(at: Point(x:0, y:0), width: 15, height: 7)
+                
             default:
                 // Any other character means move forward
                 turtle.forward(steps: Int(round(length)))
