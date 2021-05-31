@@ -26,31 +26,62 @@ class CulminatingSketch: NSObject, Sketchable {
         canvas.highPerformance = true
         
         // Create the basic L-system
-        var flowerSystem = LindenmayerSystem(axiom: "D",
+        var flowerSystem = LindenmayerSystem(axiom: "1[------ff+++++++FFFFFFFFFFFF-FFFFFFFFFFFF]1[++++++ff-------FFFFFFFFFFFF+FFFFFFFFFF]1[------fff+++++++FFFFFFFFFFFF-FFFFFFFFFFFF]1[++++++fff-------FFFFFFFFFFFF+FFFFFFFFFF]1FFFFFFFFFFFFFFFFFFFFFF1[+FFFFFFFFGFFFFFFFFFG]1[-FFFFFFFFFGFFFFFFFFG]1[--FFFFFFFFFFFGFFFFFFG]1[+FFFFFFFFFFFFFGFFFFFFFG]",
+                                             
                                              rules: [
-                        
                                                 
-                                                "D": [Successor(odds: 1, text: "[C+++++C+++++C+++++C++++C]")],
                                                 
-                                                "C": [Successor(odds: 1, text: "0[++++F-F-F-F-F-F-F-F---F]1[----F+F+F+F+F+F+F+F+++F]2[FFFFB]")],
-
+                                                "G": [
+                                                    Successor(odds: 1, text: "1FFFFFFFFFFFFFFFFFFFF1[+FFFFFFFFFFFFFFFFFH]1[-FFFFFFFFFFFFFFFFFH]"),
+                                                    Successor(odds: 1, text: "1FFFFFFFFFFFFFFFFFFFFH1[++FFFFFFFFFFFFFFFFFH]1[-FFFFFFFFFFFFFFFFFH]"),
+                                                    Successor(odds: 1, text: "1FFFFFFFFFFFFFFFFFFFFF1[+FFFFFFFFFFFFFFFFFH]1[--FFFFFFFFFFFFFFFFFH]")
+                                                ],
+                                                
+                                                
+                                                "H": [
+                                                    
+                                                    Successor(odds: 1, text: "1FFFFFFFFFFFFFFFFFF1[+FFFFFFFFFFFFFFFFFI]1[-FFFFFFFFFFFDFFFFFFI]"),
+                                                    Successor(odds: 1, text: "1FFFFFFFFFFFFFFFFFI1[++FFFFFFFFFFFFFDFFFFFFFI]1[-FFFFFFFFFFFFFFFFFI]"),
+                                                    Successor(odds: 1, text: "1FFFFFFFFFFFFFFFFF1[+FFFFFFFFFFFFFFFFFI]1[--FFFFFFFFFFFFFDFFFFFFFI]")
+                                                ],
+                                                
+                                                "I": [
+                                                    
+                                                    Successor(odds: 1, text: "1FFFFFFFFFFFFFFFFF1[+FFFFFFFFFFFFFFDFFFFFF]1[-FFFFFFFFFFFFFFDFFFFFF]"),
+                                                    Successor(odds: 1, text: "1FFFFFFFFFFFFFFFFF1[++FFFFFFFFFFFFFFDFFFFFF]1[-FFFFFFFFFFFFFFFFF]"),
+                                                    Successor(odds: 1, text: "1FFFFFFFFFFFFFFFFF1[+FFFFFFFFFFFFFFFFF]1[--FFFFFFFFFFFFFFDFFFFFF]")
+                                                ],
+                                                
+                                                
+                                                
+                                                "D": [
+                                                    Successor(odds: 1, text: "[C+++++C+++++C+++++C++++C]")
+                                                ],
+                                                
+                                                "C":
+                                                    [Successor(odds: 1, text: "0[++++F-F-F-F-F-F-F-F---F]0[----F+F+F+F+F+F+F+F+++F]3[FFFFB]"),
+                                                     Successor(odds: 1, text: "2[++++F-F-F-F-F-F-F-F---F]2[----F+F+F+F+F+F+F+F+++F]3[FFFFB]")
+                                                    ],
+                                                
+                                                
+                                                
                                                 
                                              ],
-                                             generations: 2)
+                                             generations: 5)
         
         // Visualize the system
         var visualizedFlower = Visualizer(for: flowerSystem,
                                           on: canvas,
                                           length: 30,
-                                          reduction: 2,
+                                          reduction: 2.2,
                                           angle: 15,
-                                          initialPosition: Point(x: 250, y: 250),
-                                          initialHeading: 0,
+                                          initialPosition: Point(x: 250, y: 100),
+                                          initialHeading: 90,
                                           colors: [
-                                            "0" : LSColor(hue: 113, saturation: 100, brightness: 40, alpha: 100),
-                                            "1" : LSColor.blue,
-                                            "2": LSColor.orange,
-                                            "3": LSColor(hue: 343, saturation: 38, brightness: 86, alpha: 100)
+                                            "0" : LSColor(hue: 343, saturation: 72, brightness: 86, alpha: 100),
+                                            "1" : LSColor(hue: 29, saturation: 100, brightness: 29, alpha: 100),
+                                            "2": LSColor(hue: 343, saturation: 38, brightness: 86, alpha: 100),
+                                            "3": LSColor(hue: 38, saturation: 87, brightness: 100, alpha: 100)
                                           ])
         
         // Render the system

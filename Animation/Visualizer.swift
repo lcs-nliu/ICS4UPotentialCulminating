@@ -274,7 +274,7 @@ struct Visualizer: Codable {
                 turtle?.restoreState()
             case "B":
                 // Render a small berry
-                canvas?.drawEllipse(at: Point(x: 0, y: 0), width: 5, height: 5)
+                canvas?.drawEllipse(at: Point(x: 0, y: 0), width: 1, height: 1)
             case "a", "b", "c", "d", "e", "f":
                 // Move the turtle forward without drawing a line
                 turtle?.penUp()
