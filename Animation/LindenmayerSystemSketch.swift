@@ -18,39 +18,12 @@ class LindenmayerSystemSketch: NSObject, Sketchable {
         // Enable faster rendering
         canvas.highPerformance = true
         
-        // Define the L system
-        var system = LindenmayerSystem(axiom: "F+F+F+F+",
-                                       rules: [
-                                        "F": [
-                                            Successor(odds: 1, text: "FFF+FF-FFF-FF+FFF")
-                                        ]
-                                       ],
-                                       generations: 2)
-        
 
     
-    // Visualize
-    var visualizedSystem = Visualizer(for: system,
-                                      on: canvas,
-                                      length: 90,
-                                      reduction: 9,
-                                      angle: 90,
-                                      initialPosition: Point(x: 150, y: 100),
-                                      initialHeading: 90)
+    // Load L system from JSON file
+        var system = Visualizer(fromJSONFile: "nicole-ocotillo-bush", drawingOn: canvas)
         
-        
-        // Visualize
-        var largerVisualizedSystem = Visualizer(for: system,
-                                          on: canvas,
-                                          length: 180,
-                                          reduction: 9,
-                                          angle: 90,
-                                          initialPosition: Point(x: 300, y: 300),
-                                          initialHeading: 90)
-        
-       // Render the system
-        visualizedSystem.render()
-        largerVisualizedSystem.render()
+        system.render()
         
     }
     
