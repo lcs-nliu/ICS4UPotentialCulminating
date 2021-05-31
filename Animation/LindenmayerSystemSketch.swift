@@ -21,7 +21,7 @@ class LindenmayerSystemSketch: NSObject, Sketchable {
 
     
     // Load L system from JSON file
-        var system = Visualizer(fromJSONFile: "aidan-Cattail-sketch", drawingOn: canvas)
+        var system = Visualizer(fromJSONFile: "nicole-cherry-blossom-tree", drawingOn: canvas)
         
         system.render()
         

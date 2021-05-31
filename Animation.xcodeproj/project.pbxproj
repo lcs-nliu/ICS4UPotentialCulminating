@@ -21,6 +21,7 @@
 		4649C92F26656241006C7ED0 /* scott-berry-tree.json in Resources */ = {isa = PBXBuildFile; fileRef = 4649C92426656240006C7ED0 /* scott-berry-tree.json */; };
 		4649C93026656241006C7ED0 /* gordon-leafy-plant.json in Resources */ = {isa = PBXBuildFile; fileRef = 4649C92526656240006C7ED0 /* gordon-leafy-plant.json */; };
 		4649C93126656241006C7ED0 /* gordon-short-branching-tree.json in Resources */ = {isa = PBXBuildFile; fileRef = 4649C92626656240006C7ED0 /* gordon-short-branching-tree.json */; };
+		4649C9372665AADB006C7ED0 /* nicole-cherry-blossom-tree.json in Resources */ = {isa = PBXBuildFile; fileRef = 4649C9362665AADB006C7ED0 /* nicole-cherry-blossom-tree.json */; };
 		46A97193265FDD1700B7F0D4 /* LSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A97192265FDD1700B7F0D4 /* LSColor.swift */; };
 		46D8AA3F2645BA3100F27C54 /* Predecessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8AA3B2645BA3000F27C54 /* Predecessor.swift */; };
 		46D8AA402645BA3100F27C54 /* LindenmayerSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8AA3C2645BA3000F27C54 /* LindenmayerSystem.swift */; };
@@ -89,6 +90,7 @@
 		4649C92426656240006C7ED0 /* scott-berry-tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "scott-berry-tree.json"; path = "../../LindenmayerSystemCatalog/scott-berry-tree.json"; sourceTree = "<group>"; };
 		4649C92526656240006C7ED0 /* gordon-leafy-plant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "gordon-leafy-plant.json"; sourceTree = "<group>"; };
 		4649C92626656240006C7ED0 /* gordon-short-branching-tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "gordon-short-branching-tree.json"; sourceTree = "<group>"; };
+		4649C9362665AADB006C7ED0 /* nicole-cherry-blossom-tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nicole-cherry-blossom-tree.json"; sourceTree = "<group>"; };
 		46A97192265FDD1700B7F0D4 /* LSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSColor.swift; sourceTree = "<group>"; };
 		46D8AA3B2645BA3000F27C54 /* Predecessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predecessor.swift; sourceTree = "<group>"; };
 		46D8AA3C2645BA3000F27C54 /* LindenmayerSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LindenmayerSystem.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				4649C9202665623E006C7ED0 /* sihan-tree.json */,
 				4649C91F2665623E006C7ED0 /* victoria-bush.json */,
 				4649C91626645D48006C7ED0 /* nicole-ocotillo-bush.json */,
+				4649C9362665AADB006C7ED0 /* nicole-cherry-blossom-tree.json */,
 			);
 			name = SystemCatalog;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				4649C92F26656241006C7ED0 /* scott-berry-tree.json in Resources */,
 				4649C92C26656241006C7ED0 /* ilana-fern-plant.json in Resources */,
 				81064A111C130A10007ED524 /* Main.storyboard in Resources */,
+				4649C9372665AADB006C7ED0 /* nicole-cherry-blossom-tree.json in Resources */,
 				4649C93026656241006C7ED0 /* gordon-leafy-plant.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
