@@ -36,50 +36,71 @@
           "odds" : 1
         },
         {
-          "text" : "XJ[--E][+J]",
+          "text" : "1FFFFFFFFFFFFFFFFF1[++FFFFFFFFFFFFFFDFFFFFF]1[-FFFFFFFFFFFFFFFFF]",
           "odds" : 1
         },
         {
-          "text" : "XJ[-E][++J]",
+          "text" : "1FFFFFFFFFFFFFFFFF1[+FFFFFFFFFFFFFFFFF]1[--FFFFFFFFFFFFFFDFFFFFF]",
           "odds" : 1
         }
       ],
-      "G" : [
+      "D" : [
         {
-          "text" : "X[-H][+H]",
+          "text" : "[0C+++++0C+++++0C+++++0C++++0C]",
           "odds" : 1
+        
         },
+        
         {
-          "text" : "XX[--HK][+H]",
-          "odds" : 1
+            "text" : "[2C+++++2C+++++2C+++++2C++++2C]",
+            "odds" : 1
+            
         },
-        {
-          "text" : "XH[-H][++H]",
-          "odds" : 1
-        }
       ],
-      "J" : [
+      "C" : [
         {
-          "text" : "XXX[-XX][+X]",
+          "text" : "0[++++F-F-F-F-F-F-F-F---F]0[----F+F+F+F+F+F+F+F+++F]3[FFFFB]",
           "odds" : 1
         },
         {
-          "text" : "XXXX[--XXK][+XX]",
-          "odds" : 1
-        },
-        {
-          "text" : "XXXX[-XK][++X]",
+          "text" : "2[++++F-F-F-F-F-F-F-F---F]2[----F+F+F+F+F+F+F+F+++F]3[FFFFB]",
           "odds" : 1
         }
       ]
     },
     "generations" : 5
   },
-  "length" : 15,
+  "length" : 30,
   "angle" : 15,
-  "initialX" : 400,
+  "initialX" : 250,
   "initialHeading" : 90,
-  "reduction" : 1.1000000000000001,
-  "initialY" : 25
+  "reduction" : 2.2,
+  "colors" : {
+    "0" : {
+      "hue" : 343,
+      "saturation" : 72,
+      "brightness" : 86,
+      "alpha" : 100
+    },
+    "1" : {
+      "hue" : 29,
+      "saturation" : 100,
+      "brightness" : 29,
+      "alpha" : 100
+    },
+    "2" : {
+      "hue" : 343,
+      "saturation" : 28,
+      "brightness" : 86,
+      "alpha" : 100
+    },
+    "3" : {
+      "hue" : 38,
+      "saturation" : 87,
+      "brightness" : 100,
+      "alpha" : 100
+    }
+  },
+  "initialY" : 100
 }
 

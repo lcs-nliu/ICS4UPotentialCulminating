@@ -21,6 +21,8 @@ class CulminatingSketch: NSObject, Sketchable {
         
         // Create canvas object – specify size
         canvas = Canvas(width: 500, height: 500)
+        canvas.fillColor = Color(hue: 216, saturation: 46, brightness: 100, alpha: 100)
+        canvas.drawRectangle(at: Point(x:0, y:0), width: 500, height: 500)
         
         // Enable faster rendering
         canvas.highPerformance = true
@@ -53,9 +55,9 @@ class CulminatingSketch: NSObject, Sketchable {
                                                 ],
                                                 
                                                 
-                                                
                                                 "D": [
-                                                    Successor(odds: 1, text: "[C+++++C+++++C+++++C++++C]")
+                                                    Successor(odds: 1, text: "[0C+++++0C+++++0C+++++0C++++0C]"),
+                                                    Successor(odds: 1, text: "[2C+++++2C+++++2C+++++2C++++2C]")
                                                 ],
                                                 
                                                 "C":
